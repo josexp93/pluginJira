@@ -1,0 +1,112 @@
+{
+   "key": "com.rauliki.descriptiontemplates",
+   "name": "Description Templates for JIRA Cloud",
+   "version": "2.3",
+   "description": "This is an extension for your JIRA Cloud to allow users to save templates of descriptions and reuse it when create new tickets. See more in http://documentation.mraddon.com",
+   "vendor": {
+      "name": "MrAddon raulpelaez@mraddon.com",
+      "url": "http://www.MrAddon.com"
+   },
+   "baseUrl": "https://raw.githubusercontent.com/mraddon/DescriptionTemplates/master/",
+   "enableLicensing": false,
+   "authentication": {
+      "type": "none"
+   },
+   
+   "apiMigrations": {
+        "gdpr": true
+    },
+   
+  "modules": {
+   "webSections": [
+        {
+            "key": "links",
+            "location": "system.user.options",
+			"weight": 10,
+            "name": {
+                "value": "Description Templates"
+            }
+        }
+   
+    ], 
+    "webItems": [
+      {
+        "location": "system.top.navigation.bar",
+        "weight": 200,
+        "styleClasses": [
+          "webitem",
+          "system-present-webitem"
+        ],
+        "url": "/secure/CreateIssue.jspa",
+        "context": "product",
+        "target": {
+          "type": "page"
+        },
+        "tooltip": {
+          "value": "Create new Issue with Description Template"
+        },
+        "icon": {
+          "width": 16,
+          "height": 16,
+          "url": "https://raw.githubusercontent.com/mraddon/DescriptionTemplates/master/img/pluginIcon.png"
+        },
+        "name": {
+          "value": "NewIssue!"
+        },
+        "key": "create-issue"
+      },
+      {
+        "location": "system.top.navigation.bar",
+        "weight": 200,
+        "styleClasses": [
+          "webitem",
+          "system-present-webitem"
+        ],
+        "url": "https://mraddon.github.io/CheckBrowser/description_templates.html",
+        "context": "product",
+        "target": {
+          "type": "page"
+        },
+        "tooltip": {
+          "value": "Install in Browser Description Templates"
+        },
+        "icon": {
+          "width": 16,
+          "height": 16,
+          "url": "https://raw.githubusercontent.com/mraddon/DescriptionTemplates/master/img/pluginIcon.png"
+        },
+        "name": {
+          "value": "DescTemplates!"
+        },
+        "key": "install-descriptiontemplate"
+      },
+      {
+        "location": "system.user.options/links",
+        "weight": 200,
+        "styleClasses": [
+          "webitem",
+          "system-present-webitem"
+        ],
+        "url": "https://mraddon.github.io/CheckBrowser/description_templates.html",
+        "context": "product",
+        "target": {
+          "type": "page"
+        },
+        "tooltip": {
+          "value": "Install in Browser"
+        },
+        "icon": {
+          "width": 16,
+          "height": 16,
+          "url": "https://raw.githubusercontent.com/mraddon/DescriptionTemplates/master/img/pluginIcon.png"
+        },
+        "name": {
+          "value": "Install in Browser"
+        },
+        "key": "install"
+      }
+      
+    ]
+  }
+
+}
